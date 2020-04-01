@@ -38,7 +38,7 @@ from tensorflow.keras.utils import get_file
 from tensorflow.keras import backend as K
 from tensorflow.keras.applications.imagenet_utils import decode_predictions
 from tensorflow.keras.preprocessing import image
-from common.ops.keras_app.imagenet_utils import _obtain_input_shape
+from ops.keras_app.imagenet_utils import _obtain_input_shape
 
 backend = tf.keras.backend
 WEIGHTS_PATH = 'http://redcatlabs.com/downloads/inception_v1_weights_tf_dim_ordering_tf_kernels.h5'

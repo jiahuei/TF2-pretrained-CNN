@@ -29,8 +29,7 @@ For MobileNetV2:
 import logging
 import tensorflow as tf
 import tensorflow_hub as tfhub
-# from common.ops import models_v0 as mops
-from common.ops import keras_app as kapp
+from ops import keras_app as kapp
 
 assert tf.version.VERSION.startswith('2.')
 

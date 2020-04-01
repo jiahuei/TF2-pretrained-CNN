@@ -9,10 +9,10 @@ reduce inference cost on mobile devices.
 import os
 import warnings
 
-from common.ops.keras_app import get_submodules_from_kwargs
-from common.ops.keras_app import imagenet_utils
-from common.ops.keras_app.imagenet_utils import decode_predictions
-from common.ops.keras_app.imagenet_utils import _obtain_input_shape
+from ops.keras_app import get_submodules_from_kwargs
+from ops.keras_app import imagenet_utils
+from ops.keras_app.imagenet_utils import decode_predictions
+from ops.keras_app.imagenet_utils import _obtain_input_shape
 # from . import get_submodules_from_kwargs
 # from . import imagenet_utils
 # from .imagenet_utils import decode_predictions

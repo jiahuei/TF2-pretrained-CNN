@@ -5,7 +5,7 @@ import warnings
 import numpy as np
 import tensorflow as tf
 
-from common.ops.keras_app import get_submodules_from_kwargs
+from ops.keras_app import get_submodules_from_kwargs
 
 CLASS_INDEX = None
 CLASS_INDEX_PATH = ('https://storage.googleapis.com/download.tensorflow.org/'

@@ -11,20 +11,13 @@ import numpy as np
 import urllib.request as urllib
 from pprint import pprint
 from datetime import datetime
+from ops import pretrained_cnn as cops
 
 os.environ['CUDA_DEVICE_ORDER'] = 'PCI_BUS_ID'
 os.environ['CUDA_VISIBLE_DEVICES'] = '1'
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 import tensorflow as tf
 
-# import tensorflow_hub as tfhub
-
-up_dir = os.path.dirname
-CURR_DIR = up_dir(os.path.realpath(__file__))
-BASE_DIR = up_dir(up_dir(CURR_DIR))
-COMMON = os.path.join(BASE_DIR, 'common')
-sys.path.insert(1, BASE_DIR)
-from common.ops import pretrained_cnn as cops
 
 NO_BATCHNORM = ['vgg_16', 'vgg_19']
 decode_predictions = tf.keras.applications.imagenet_utils.decode_predictions

@@ -17,10 +17,10 @@ import os
 import math
 import tensorflow as tf
 
-from common.ops.keras_app import correct_pad
-from common.ops.keras_app import get_submodules_from_kwargs
-from common.ops.keras_app import imagenet_utils
-from common.ops.keras_app.imagenet_utils import _obtain_input_shape
+from ops.keras_app import correct_pad
+from ops.keras_app import get_submodules_from_kwargs
+from ops.keras_app import imagenet_utils
+from ops.keras_app.imagenet_utils import _obtain_input_shape
 
 backend = tf.keras.backend
 layers = tf.keras.layers
