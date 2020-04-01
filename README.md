@@ -8,7 +8,7 @@ Simple Python 3 wrapper for `keras_applications` and `tensorflow_hub` CNN models
 
 ## References
 
-* [Keras Applications](https://github.com/keras-team/keras-applications/tree/976050c468ff949bcbd9b9cf64fe1d5c81db3f3a)
+* [Keras Applications](https://github.com/keras-team/keras-applications/tree/0bb8618db8d764e85159b898688c269312fa386b)
 * [TensorFlow Hub](https://www.tensorflow.org/hub/api_docs/python/hub)
 
 
