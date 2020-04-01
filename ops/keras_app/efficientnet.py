@@ -1,5 +1,5 @@
 """
-Based on this commit: https://github.com/keras-team/keras-applications/tree/71acdcd98088501247f4b514b7cbbdf8182a05a4
+Based on this commit: https://github.com/keras-team/keras-applications/tree/0bb8618db8d764e85159b898688c269312fa386b
 
 EfficientNet models for Keras.
 
@@ -168,6 +168,10 @@ def block(inputs, activation_fn=swish, drop_rate=0., name='',
     if 0 < se_ratio <= 1:
         filters_se = max(1, int(filters_in * se_ratio))
         se = layers.GlobalAveragePooling2D(name=name + 'se_squeeze')(x)
+        if bn_axis == 1:
+            se = layers.Reshape((filters, 1, 1), name=name + 'se_reshape')(se)
+        else:
+            se = layers.Reshape((1, 1, filters), name=name + 'se_reshape')(se)
         se = layers.Reshape((1, 1, filters), name=name + 'se_reshape')(se)
         se = layers.Conv2D(filters_se, 1,
                            padding='same',
