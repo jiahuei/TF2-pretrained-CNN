@@ -1,6 +1,6 @@
 # Pretrained CNN Models in TensorFlow 2
 
-Simple Python 3 wrapper for `tf.keras.applications` and `tensorflow_hub` CNN models.
+Simple Python 3 wrapper for `keras_applications` and `tensorflow_hub` CNN models.
 
 - Allows extraction of any number of intermediate layers (feature maps) from the CNN. 
 - The models are implemented as `tf.keras.layers.Layer` instances.
