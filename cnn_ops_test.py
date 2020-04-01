@@ -5,12 +5,9 @@ Created on 06 Feb 2020 16:26:17
 @author: jiahuei
 """
 import os
-import sys
-import time
 import numpy as np
 import urllib.request as urllib
 from pprint import pprint
-from datetime import datetime
 from ops import pretrained_cnn as cops
 
 os.environ['CUDA_DEVICE_ORDER'] = 'PCI_BUS_ID'
@@ -29,7 +26,7 @@ tf.random.set_seed(rand_seed)
 
 class Config:
     rand_seed = 2
-    kernel_initializer = 'xavier_uniform'
+    kernel_initializer = 'glorot_uniform'
     cnn_feat_map_name = None
     cnn_name = None
     cnn_trainable = False
@@ -78,7 +75,6 @@ class CNNModel(tf.keras.Model):
         images = self.preprocess_image(inputs[0])
         preds, endpoints = self.encoder_cnn.forward(images=images, training=training)
         assert len(endpoints) == 1, 'More than one feature map / layer returned'
-        # pprint(self.encoder_cnn.get_updates_for(images))
         if c.dense_trainable:
             fm = endpoints[c.cnn_feat_map_name]
             assert len(fm.shape) == 4, 'Feature map is not a rank-4 tensor'
