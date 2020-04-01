@@ -57,6 +57,5 @@ def correct_pad(backend, inputs, kernel_size):
 
 
 # from ops.keras_app import resnext
-from ops.keras_app import masked_mobilenet
 from ops.keras_app import efficientnet
 from ops.keras_app import imagenet_utils

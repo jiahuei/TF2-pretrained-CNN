@@ -409,8 +409,7 @@ class KerasCNN(PretrainedCNN):
             _net_type = self.cnn_name.split('_')
             assert len(_net_type) == 4
             if _net_type[1] == 'v1':
-                # cnn_fn = tf.keras.applications.MobileNet
-                cnn_fn = kapp.masked_mobilenet.MobileNet
+                cnn_fn = tf.keras.applications.MobileNet
             else:
                 cnn_fn = tf.keras.applications.MobileNetV2
             self.cnn_kwargs.update(dict(alpha=int(_net_type[2]) / 100.))

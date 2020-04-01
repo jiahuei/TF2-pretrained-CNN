@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 """
+https://github.com/fchollet/deep-learning-models/pull/59
+
 Inception V1 model for Keras.
 
 Code modified based on:
