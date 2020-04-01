@@ -152,7 +152,6 @@ KERAS_CNN_LIST = ['vgg_16',
                   ]
 
 
-# TODO: enable BN freeze
 class PretrainedCNN(tf.keras.layers.Layer):
     def __init__(self,
                  cnn_name,
