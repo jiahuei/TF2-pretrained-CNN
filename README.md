@@ -2,7 +2,8 @@
 
 Simple Python 3 wrapper for `tf.keras.applications` and `tensorflow_hub` CNN models.
 
-The models are implemented as `tf.keras.layers.Layer` instances.
+- Allows extraction of any number of intermediate layers (feature maps) from the CNN. 
+- The models are implemented as `tf.keras.layers.Layer` instances.
 
 
 ## References
